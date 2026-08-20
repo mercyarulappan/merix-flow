@@ -150,7 +150,7 @@ MIT
 
 - 📦 **npm Package:** [MerixFlow](https://www.npmjs.com/package/merix-flow)
 - 💻 **GitHub Repository:** [MerixFlow](https://github.com/mercyarulappan/merix-flow)
-- 🚀 **Live Showcase:** [MerixFlow Showcase](https://merix-flow-showcase.vercel.app/)
+- 🚀 **Live Showcase:** [MerixFlow Showcase](https://merix-flow-showcase-b4sb.vercel.app/)
 
 ### Author
 Created with ❤️ by Mercy
