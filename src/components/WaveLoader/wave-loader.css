@@ -1,0 +1,94 @@
+.merix-wave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.merix-wave span {
+    width: 6px;
+    height: 24px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to top,
+            #6366f1,
+            #ec4899);
+
+    animation: merix-wave-animation 1s ease-in-out infinite;
+}
+
+/* Delay each bar */
+
+.merix-wave span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.merix-wave span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.merix-wave span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.merix-wave span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.merix-wave span:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.merix-wave span:nth-child(6) {
+    animation-delay: 0.1s;
+}
+
+.merix-wave span:nth-child(7) {
+    animation-delay: 0s;
+}
+
+@keyframes merix-wave-animation {
+
+    0%,
+    100% {
+        transform: scaleY(0.45);
+    }
+
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+/* Small */
+
+.merix-wave-small {
+    gap: 3px;
+}
+
+.merix-wave-small span {
+    width: 4px;
+    height: 16px;
+}
+
+/* Medium */
+
+.merix-wave-medium {
+    gap: 5px;
+}
+
+.merix-wave-medium span {
+    width: 6px;
+    height: 24px;
+}
+
+/* Large */
+
+.merix-wave-large {
+    gap: 7px;
+}
+
+.merix-wave-large span {
+    width: 8px;
+    height: 36px;
+}

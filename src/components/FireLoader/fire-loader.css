@@ -1,0 +1,139 @@
+.merix-fire {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+
+    height: 55px;
+}
+
+.merix-fire span {
+    width: 10px;
+    height: 28px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    background: linear-gradient(to top,
+            #ef4444,
+            #f97316,
+            #facc15);
+
+    box-shadow:
+        0 0 8px #f97316,
+        0 0 16px rgba(249, 115, 22, 0.6);
+
+    transform-origin: bottom;
+
+    animation: merix-fire-burn 0.8s ease-in-out infinite;
+}
+
+.merix-fire span:nth-child(1) {
+    height: 22px;
+    animation-delay: 0.1s;
+}
+
+.merix-fire span:nth-child(2) {
+    height: 35px;
+    animation-delay: 0.25s;
+}
+
+.merix-fire span:nth-child(3) {
+    height: 45px;
+    animation-delay: 0s;
+}
+
+.merix-fire span:nth-child(4) {
+    height: 32px;
+    animation-delay: 0.2s;
+}
+
+.merix-fire span:nth-child(5) {
+    height: 24px;
+    animation-delay: 0.35s;
+}
+
+@keyframes merix-fire-burn {
+
+    0%,
+    100% {
+        transform: scaleY(0.75) skewX(0deg);
+        opacity: 0.7;
+    }
+
+    25% {
+        transform: scaleY(1.1) skewX(-4deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scaleY(0.85) skewX(4deg);
+        opacity: 0.85;
+    }
+
+    75% {
+        transform: scaleY(1.15) skewX(-3deg);
+        opacity: 1;
+    }
+}
+
+/* Small */
+
+.merix-fire-small {
+    height: 35px;
+    gap: 3px;
+}
+
+.merix-fire-small span {
+    width: 6px;
+}
+
+.merix-fire-small span:nth-child(1) {
+    height: 15px;
+}
+
+.merix-fire-small span:nth-child(2) {
+    height: 23px;
+}
+
+.merix-fire-small span:nth-child(3) {
+    height: 30px;
+}
+
+.merix-fire-small span:nth-child(4) {
+    height: 21px;
+}
+
+.merix-fire-small span:nth-child(5) {
+    height: 16px;
+}
+
+/* Large */
+
+.merix-fire-large {
+    height: 80px;
+    gap: 8px;
+}
+
+.merix-fire-large span {
+    width: 14px;
+}
+
+.merix-fire-large span:nth-child(1) {
+    height: 32px;
+}
+
+.merix-fire-large span:nth-child(2) {
+    height: 50px;
+}
+
+.merix-fire-large span:nth-child(3) {
+    height: 65px;
+}
+
+.merix-fire-large span:nth-child(4) {
+    height: 46px;
+}
+
+.merix-fire-large span:nth-child(5) {
+    height: 35px;
+}

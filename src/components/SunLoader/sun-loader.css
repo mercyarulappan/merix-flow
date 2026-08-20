@@ -1,0 +1,139 @@
+.merix-sun {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+}
+
+/* Rotating rays */
+
+.merix-sun-rays {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    animation: merix-sun-rotate 4s linear infinite;
+}
+
+.merix-sun-rays span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 13px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom,
+            #facc15,
+            #f97316);
+
+    box-shadow:
+        0 0 7px rgba(249, 115, 22, 0.45);
+
+    transform-origin: center -25px;
+}
+
+/* Position each ray */
+
+.merix-sun-rays span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.merix-sun-rays span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.merix-sun-rays span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.merix-sun-rays span:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.merix-sun-rays span:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.merix-sun-rays span:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.merix-sun-rays span:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.merix-sun-rays span:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+/* Sun */
+
+.merix-sun-core {
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 35% 35%,
+            #fff7ae,
+            #facc15 55%,
+            #f97316);
+
+    box-shadow:
+        0 0 10px #facc15,
+        0 0 25px rgba(249, 115, 22, 0.55);
+
+    animation: merix-sun-pulse 1.3s ease-in-out infinite;
+}
+
+@keyframes merix-sun-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes merix-sun-pulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* Small */
+
+.merix-sun-small {
+    transform: scale(0.7);
+}
+
+/* Medium */
+
+.merix-sun-medium {
+    transform: scale(1);
+}
+
+/* Large */
+
+.merix-sun-large {
+    transform: scale(1.35);
+}

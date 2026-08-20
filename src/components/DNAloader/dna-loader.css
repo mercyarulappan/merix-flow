@@ -1,0 +1,121 @@
+.merix-dna {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+}
+
+.merix-dna-step {
+    position: relative;
+
+    width: 12px;
+    height: 50px;
+
+    animation: merix-dna-step 1.4s ease-in-out infinite;
+
+    animation-delay: var(--delay);
+}
+
+.merix-dna-step span {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+/* Left particle */
+
+.merix-dna-left {
+    width: 8px;
+    height: 8px;
+
+    top: 4px;
+    left: 0;
+
+    background: #06b6d4;
+
+    box-shadow: 0 0 8px #06b6d4;
+}
+
+/* Right particle */
+
+.merix-dna-right {
+    width: 8px;
+    height: 8px;
+
+    bottom: 4px;
+    right: 0;
+
+    background: #a855f7;
+
+    box-shadow: 0 0 8px #a855f7;
+}
+
+/* Connecting line */
+
+.merix-dna-bar {
+    width: 16px;
+    height: 3px;
+
+    top: 50%;
+    left: -2px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg,
+            #06b6d4,
+            #a855f7);
+
+    transform: rotate(45deg);
+}
+
+/* Animation */
+
+@keyframes merix-dna-step {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Small */
+
+.merix-dna-small .merix-dna-step {
+    width: 9px;
+    height: 36px;
+}
+
+.merix-dna-small .merix-dna-left,
+.merix-dna-small .merix-dna-right {
+    width: 6px;
+    height: 6px;
+}
+
+.merix-dna-small .merix-dna-bar {
+    width: 12px;
+    height: 2px;
+}
+
+/* Large */
+
+.merix-dna-large .merix-dna-step {
+    width: 16px;
+    height: 70px;
+}
+
+.merix-dna-large .merix-dna-left,
+.merix-dna-large .merix-dna-right {
+    width: 11px;
+    height: 11px;
+}
+
+.merix-dna-large .merix-dna-bar {
+    width: 21px;
+    height: 4px;
+}

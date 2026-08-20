@@ -1,0 +1,150 @@
+.merix-water-drop {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 75px;
+}
+
+.merix-drop {
+    position: absolute;
+
+    top: 5px;
+    left: 50%;
+
+    width: 22px;
+    height: 30px;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    border-radius: 50% 50% 50% 0;
+
+    background: linear-gradient(135deg,
+            #67e8f9,
+            #06b6d4 50%,
+            #2563eb);
+
+    box-shadow:
+        0 0 10px rgba(6, 182, 212, 0.45),
+        0 0 20px rgba(37, 99, 235, 0.25);
+
+    animation: merix-drop-fall 1.6s ease-in-out infinite;
+}
+
+.merix-drop::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 10px;
+
+    top: 5px;
+    left: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    transform: rotate(-45deg);
+}
+
+.merix-ripple {
+    position: absolute;
+
+    left: 50%;
+    bottom: 9px;
+
+    width: 40px;
+    height: 10px;
+
+    transform: translateX(-50%);
+
+    border: 2px solid rgba(6, 182, 212, 0.7);
+
+    border-radius: 50%;
+
+    animation: merix-ripple 1.6s ease-out infinite;
+}
+
+.merix-ripple span {
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px solid rgba(37, 99, 235, 0.45);
+
+    border-radius: 50%;
+}
+
+@keyframes merix-drop-fall {
+    0% {
+        top: 3px;
+
+        opacity: 0;
+
+        transform: translateX(-50%) rotate(45deg) scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    65% {
+        top: 40px;
+
+        opacity: 1;
+
+        transform: translateX(-50%) rotate(45deg) scale(1);
+    }
+
+    75% {
+        opacity: 0;
+
+        transform: translateX(-50%) rotate(45deg) scale(0.8);
+    }
+
+    100% {
+        top: 3px;
+
+        opacity: 0;
+    }
+}
+
+@keyframes merix-ripple {
+
+    0%,
+    60% {
+        transform: translateX(-50%) scaleX(0.5);
+
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scaleX(1.3);
+
+        opacity: 0;
+    }
+}
+
+/* Sizes */
+
+.merix-water-drop-small {
+    transform: scale(0.7);
+}
+
+.merix-water-drop-medium {
+    transform: scale(1);
+}
+
+.merix-water-drop-large {
+    transform: scale(1.35);
+}

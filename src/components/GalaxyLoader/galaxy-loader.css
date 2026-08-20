@@ -1,0 +1,197 @@
+.merix-galaxy {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #050816;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 12px rgba(139, 92, 246, 0.35),
+        0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Core */
+
+.merix-galaxy-core {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            white 0%,
+            #c084fc 35%,
+            #7c3aed 70%,
+            transparent 100%);
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px #a855f7,
+        0 0 30px #6366f1;
+
+    animation: merix-galaxy-pulse 1.5s ease-in-out infinite;
+
+    z-index: 5;
+}
+
+/* Orbit */
+
+.merix-galaxy-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(139, 92, 246, 0.3);
+
+    border-radius: 50%;
+}
+
+/* Orbit 1 */
+
+.merix-galaxy-orbit-one {
+    width: 46px;
+    height: 22px;
+
+    transform: rotate(25deg);
+
+    animation: merix-galaxy-spin-one 2s linear infinite;
+}
+
+/* Orbit 2 */
+
+.merix-galaxy-orbit-two {
+    width: 58px;
+    height: 28px;
+
+    transform: rotate(-40deg);
+
+    animation: merix-galaxy-spin-two 2.8s linear infinite;
+}
+
+/* Orbit 3 */
+
+.merix-galaxy-orbit-three {
+    width: 64px;
+    height: 34px;
+
+    transform: rotate(75deg);
+
+    animation: merix-galaxy-spin-three 3.5s linear infinite;
+}
+
+/* Stars */
+
+.merix-galaxy-orbit span {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 5px white,
+        0 0 10px #38bdf8;
+}
+
+.merix-galaxy-orbit span:nth-child(1) {
+    top: -3px;
+    left: 50%;
+}
+
+.merix-galaxy-orbit span:nth-child(2) {
+    bottom: -3px;
+    right: 20%;
+}
+
+.merix-galaxy-orbit-three span {
+    top: 50%;
+    right: -3px;
+}
+
+/* Animations */
+
+@keyframes merix-galaxy-spin-one {
+    from {
+        transform: rotate(25deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(25deg) rotate(360deg);
+    }
+}
+
+@keyframes merix-galaxy-spin-two {
+    from {
+        transform: rotate(-40deg) rotate(360deg);
+    }
+
+    to {
+        transform: rotate(-40deg) rotate(0deg);
+    }
+}
+
+@keyframes merix-galaxy-spin-three {
+    from {
+        transform: rotate(75deg) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(75deg) rotate(360deg);
+    }
+}
+
+@keyframes merix-galaxy-pulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+/* Small */
+
+.merix-galaxy-small {
+    width: 42px;
+    height: 42px;
+}
+
+.merix-galaxy-small .merix-galaxy-core {
+    width: 10px;
+    height: 10px;
+}
+
+/* Medium */
+
+.merix-galaxy-medium {
+    width: 70px;
+    height: 70px;
+}
+
+/* Large */
+
+.merix-galaxy-large {
+    width: 100px;
+    height: 100px;
+}
+
+.merix-galaxy-large .merix-galaxy-core {
+    width: 22px;
+    height: 22px;
+}

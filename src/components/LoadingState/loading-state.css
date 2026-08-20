@@ -1,0 +1,50 @@
+.merix-loading-state {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.merix-loading-state-text {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+.merix-loading-state-error-message {
+    margin: 0;
+
+    color: #dc2626;
+
+    font-size: 14px;
+}
+
+.merix-loading-state-retry {
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.merix-loading-state-retry:hover {
+    opacity: 0.9;
+}

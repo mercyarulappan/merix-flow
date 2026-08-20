@@ -1,0 +1,56 @@
+.merix-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.merix-dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--merix-loader-color);
+    border-radius: 50%;
+    animation: merix-dot-bounce 1.2s infinite ease-in-out;
+}
+
+.merix-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.merix-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.merix-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes merix-dot-bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.merix-dots-small span {
+    width: 5px;
+    height: 5px;
+}
+
+.merix-dots-medium span {
+    width: 8px;
+    height: 8px;
+}
+
+.merix-dots-large span {
+    width: 12px;
+    height: 12px;
+}

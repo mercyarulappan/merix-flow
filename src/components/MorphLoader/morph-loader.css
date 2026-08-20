@@ -1,0 +1,172 @@
+.merix-morph {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+}
+
+.merix-morph-blob {
+    width: 52px;
+    height: 52px;
+
+    background: linear-gradient(135deg,
+            #ec4899,
+            #8b5cf6,
+            #06b6d4);
+
+    background-size: 200% 200%;
+
+    border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
+
+    filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.45));
+
+    animation:
+        merix-morph-shape 3s ease-in-out infinite,
+        merix-morph-gradient 4s ease infinite;
+}
+
+.merix-morph-blob::after {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.22);
+
+    transform: translate(13px, 10px);
+
+    filter: blur(1px);
+}
+
+/* Floating particles */
+
+.merix-morph-dot {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #67e8f9;
+
+    box-shadow:
+        0 0 8px #22d3ee;
+
+    animation: merix-morph-float 1.8s ease-in-out infinite;
+}
+
+.dot-one {
+    top: 13px;
+    left: 25px;
+
+    animation-delay: 0s;
+}
+
+.dot-two {
+    right: 18px;
+    top: 42px;
+
+    background: #f9a8d4;
+
+    box-shadow:
+        0 0 8px #ec4899;
+
+    animation-delay: 0.4s;
+}
+
+.dot-three {
+    bottom: 16px;
+    left: 25px;
+
+    background: #c4b5fd;
+
+    box-shadow:
+        0 0 8px #8b5cf6;
+
+    animation-delay: 0.8s;
+}
+
+@keyframes merix-morph-shape {
+    0% {
+        border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
+
+        transform: rotate(0deg) scale(0.9);
+    }
+
+    25% {
+        border-radius: 65% 35% 42% 58% / 55% 63% 37% 45%;
+
+        transform: rotate(90deg) scale(1.05);
+    }
+
+    50% {
+        border-radius: 35% 65% 55% 45% / 63% 42% 58% 37%;
+
+        transform: rotate(180deg) scale(0.95);
+    }
+
+    75% {
+        border-radius: 55% 45% 35% 65% / 38% 55% 45% 62%;
+
+        transform: rotate(270deg) scale(1.08);
+    }
+
+    100% {
+        border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
+
+        transform: rotate(360deg) scale(0.9);
+    }
+}
+
+@keyframes merix-morph-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes merix-morph-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(0.7);
+
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.2);
+
+        opacity: 1;
+    }
+}
+
+/* Sizes */
+
+.merix-morph-small {
+    transform: scale(0.7);
+}
+
+.merix-morph-medium {
+    transform: scale(1);
+}
+
+.merix-morph-large {
+    transform: scale(1.4);
+}

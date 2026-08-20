@@ -1,0 +1,101 @@
+.merix-typing {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-family: monospace;
+
+    font-weight: 600;
+
+    color: #6366f1;
+}
+
+.merix-typing-dots {
+    display: inline-flex;
+
+    margin-left: 2px;
+}
+
+.merix-typing-dots i {
+    width: 4px;
+    height: 4px;
+
+    margin: 0 2px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+    animation: merix-typing-dot 1.2s infinite;
+}
+
+.merix-typing-dots i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.merix-typing-dots i:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.merix-typing-dots i:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes merix-typing-dot {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.25;
+
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+
+        transform: translateY(-3px);
+    }
+}
+
+.merix-typing-cursor {
+    width: 2px;
+    height: 1em;
+
+    margin-left: 5px;
+
+    background: currentColor;
+
+    animation: merix-typing-cursor 0.7s step-end infinite;
+}
+
+@keyframes merix-typing-cursor {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Small */
+
+.merix-typing-small {
+    font-size: 12px;
+}
+
+/* Medium */
+
+.merix-typing-medium {
+    font-size: 16px;
+}
+
+/* Large */
+
+.merix-typing-large {
+    font-size: 22px;
+}

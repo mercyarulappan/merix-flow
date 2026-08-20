@@ -1,0 +1,161 @@
+.merix-orbit-dots {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+}
+
+.merix-orbit-dots span {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    transform-origin: 30px 30px;
+
+    animation: merix-orbit-dots-spin 1.5s linear infinite;
+}
+
+/* Different colors */
+
+.merix-orbit-dots span:nth-child(1) {
+    background: #ef4444;
+    box-shadow: 0 0 8px #ef4444;
+
+    animation-delay: 0s;
+}
+
+.merix-orbit-dots span:nth-child(2) {
+    background: #f97316;
+    box-shadow: 0 0 8px #f97316;
+
+    animation-delay: -0.25s;
+}
+
+.merix-orbit-dots span:nth-child(3) {
+    background: #eab308;
+    box-shadow: 0 0 8px #eab308;
+
+    animation-delay: -0.5s;
+}
+
+.merix-orbit-dots span:nth-child(4) {
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+
+    animation-delay: -0.75s;
+}
+
+.merix-orbit-dots span:nth-child(5) {
+    background: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+
+    animation-delay: -1s;
+}
+
+.merix-orbit-dots span:nth-child(6) {
+    background: #a855f7;
+    box-shadow: 0 0 8px #a855f7;
+
+    animation-delay: -1.25s;
+}
+
+@keyframes merix-orbit-dots-spin {
+    from {
+        transform: rotate(0deg) translateX(25px);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(25px);
+    }
+}
+
+/* Center */
+
+.merix-orbit-dots::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px #8b5cf6;
+}
+
+/* Small */
+
+.merix-orbit-dots-small {
+    width: 40px;
+    height: 40px;
+}
+
+.merix-orbit-dots-small span {
+    width: 6px;
+    height: 6px;
+
+    transform-origin: 20px 20px;
+}
+
+.merix-orbit-dots-small::after {
+    width: 5px;
+    height: 5px;
+}
+
+.merix-orbit-dots-small span {
+    animation-name: merix-orbit-dots-spin-small;
+}
+
+@keyframes merix-orbit-dots-spin-small {
+    from {
+        transform: rotate(0deg) translateX(16px);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(16px);
+    }
+}
+
+/* Large */
+
+.merix-orbit-dots-large {
+    width: 90px;
+    height: 90px;
+}
+
+.merix-orbit-dots-large span {
+    width: 11px;
+    height: 11px;
+
+    transform-origin: 45px 45px;
+
+    animation-name: merix-orbit-dots-spin-large;
+}
+
+.merix-orbit-dots-large::after {
+    width: 9px;
+    height: 9px;
+}
+
+@keyframes merix-orbit-dots-spin-large {
+    from {
+        transform: rotate(0deg) translateX(36px);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(36px);
+    }
+}

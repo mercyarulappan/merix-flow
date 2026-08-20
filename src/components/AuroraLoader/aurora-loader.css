@@ -1,0 +1,137 @@
+.merix-aurora {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #080b1a;
+
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, 0.25),
+        0 0 35px rgba(139, 92, 246, 0.2);
+}
+
+.merix-aurora-glow {
+    position: absolute;
+
+    width: 70%;
+    height: 140%;
+
+    filter: blur(10px);
+
+    opacity: 0.8;
+
+    transform-origin: center;
+
+    border-radius: 50%;
+}
+
+.merix-aurora-glow-one {
+    background: #22d3ee;
+
+    animation: merix-aurora-one 2s ease-in-out infinite;
+}
+
+.merix-aurora-glow-two {
+    background: #8b5cf6;
+
+    animation: merix-aurora-two 2.5s ease-in-out infinite;
+}
+
+.merix-aurora-glow-three {
+    background: #ec4899;
+
+    animation: merix-aurora-three 3s ease-in-out infinite;
+}
+
+.merix-aurora-core {
+    position: absolute;
+
+    width: 20%;
+    height: 20%;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px #22d3ee;
+
+    animation: merix-aurora-core 1.5s ease-in-out infinite;
+}
+
+@keyframes merix-aurora-one {
+
+    0%,
+    100% {
+        transform: translateX(-35%) rotate(-25deg);
+    }
+
+    50% {
+        transform: translateX(35%) rotate(25deg);
+    }
+}
+
+@keyframes merix-aurora-two {
+
+    0%,
+    100% {
+        transform: translateX(30%) rotate(30deg);
+    }
+
+    50% {
+        transform: translateX(-30%) rotate(-30deg);
+    }
+}
+
+@keyframes merix-aurora-three {
+
+    0%,
+    100% {
+        transform: translateY(-20%) rotate(-20deg);
+    }
+
+    50% {
+        transform: translateY(20%) rotate(20deg);
+    }
+}
+
+@keyframes merix-aurora-core {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.3);
+
+        opacity: 1;
+    }
+}
+
+/* Sizes */
+
+.merix-aurora-small {
+    width: 32px;
+    height: 32px;
+}
+
+.merix-aurora-medium {
+    width: 52px;
+    height: 52px;
+}
+
+.merix-aurora-large {
+    width: 78px;
+    height: 78px;
+}

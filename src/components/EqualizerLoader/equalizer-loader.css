@@ -1,0 +1,104 @@
+.merix-equalizer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    height: 50px;
+}
+
+.merix-equalizer span {
+    width: 6px;
+    height: 20px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to top,
+            #8b5cf6,
+            #ec4899);
+
+    box-shadow:
+        0 0 6px rgba(139, 92, 246, 0.4);
+
+    transform-origin: bottom;
+
+    animation: merix-equalizer-wave 0.9s ease-in-out infinite;
+}
+
+.merix-equalizer span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.merix-equalizer span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.merix-equalizer span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.merix-equalizer span:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.merix-equalizer span:nth-child(5) {
+    animation-delay: 0.35s;
+}
+
+.merix-equalizer span:nth-child(6) {
+    animation-delay: 0.2s;
+}
+
+.merix-equalizer span:nth-child(7) {
+    animation-delay: 0.05s;
+}
+
+@keyframes merix-equalizer-wave {
+
+    0%,
+    100% {
+        transform: scaleY(0.35);
+    }
+
+    50% {
+        transform: scaleY(2);
+    }
+}
+
+/* Small */
+
+.merix-equalizer-small {
+    height: 35px;
+    gap: 3px;
+}
+
+.merix-equalizer-small span {
+    width: 4px;
+    height: 14px;
+}
+
+/* Medium */
+
+.merix-equalizer-medium {
+    height: 50px;
+    gap: 5px;
+}
+
+.merix-equalizer-medium span {
+    width: 6px;
+    height: 20px;
+}
+
+/* Large */
+
+.merix-equalizer-large {
+    height: 70px;
+    gap: 7px;
+}
+
+.merix-equalizer-large span {
+    width: 9px;
+    height: 28px;
+}

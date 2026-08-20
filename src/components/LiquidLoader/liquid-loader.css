@@ -1,0 +1,84 @@
+.merix-liquid {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.merix-liquid-blob {
+    width: 44px;
+    height: 44px;
+
+    background: linear-gradient(135deg,
+            #06b6d4,
+            #6366f1,
+            #ec4899);
+
+    border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+
+    animation:
+        merix-liquid-morph 2s ease-in-out infinite,
+        merix-liquid-rotate 4s linear infinite;
+
+    box-shadow:
+        0 0 15px rgba(99, 102, 241, 0.35),
+        0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+@keyframes merix-liquid-morph {
+    0% {
+        border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+        transform: scale(1);
+    }
+
+    25% {
+        border-radius: 60% 40% 35% 65% / 55% 60% 40% 45%;
+        transform: scale(1.08);
+    }
+
+    50% {
+        border-radius: 35% 65% 55% 45% / 40% 50% 50% 60%;
+        transform: scale(0.95);
+    }
+
+    75% {
+        border-radius: 55% 45% 40% 60% / 65% 45% 55% 35%;
+        transform: scale(1.06);
+    }
+
+    100% {
+        border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+        transform: scale(1);
+    }
+}
+
+@keyframes merix-liquid-rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* Small */
+
+.merix-liquid-small .merix-liquid-blob {
+    width: 28px;
+    height: 28px;
+}
+
+/* Medium */
+
+.merix-liquid-medium .merix-liquid-blob {
+    width: 44px;
+    height: 44px;
+}
+
+/* Large */
+
+.merix-liquid-large .merix-liquid-blob {
+    width: 68px;
+    height: 68px;
+}

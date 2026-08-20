@@ -1,0 +1,63 @@
+.merix-rainbow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.merix-rainbow-ring {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(#ff0055,
+            #ff9900,
+            #ffee00,
+            #22dd55,
+            #00ccff,
+            #6633ff,
+            #ff00cc,
+            #ff0055);
+
+    animation:
+        merix-rainbow-spin 1s linear infinite;
+
+    position: relative;
+}
+
+.merix-rainbow-ring::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+/* Sizes */
+
+.merix-rainbow-small .merix-rainbow-ring {
+    width: 24px;
+    height: 24px;
+}
+
+.merix-rainbow-medium .merix-rainbow-ring {
+    width: 42px;
+    height: 42px;
+}
+
+.merix-rainbow-large .merix-rainbow-ring {
+    width: 64px;
+    height: 64px;
+}
+
+@keyframes merix-rainbow-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,42 @@
+.merix-progress {
+    width: 100%;
+}
+
+.merix-progress-track {
+    width: 100%;
+    overflow: hidden;
+    background: #e5e7eb;
+    border-radius: 999px;
+}
+
+.merix-progress-bar {
+    height: 100%;
+    background: var(--merix-progress-color);
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+/* Sizes */
+
+.merix-progress-small .merix-progress-track {
+    height: 4px;
+}
+
+.merix-progress-medium .merix-progress-track {
+    height: 8px;
+}
+
+.merix-progress-large .merix-progress-track {
+    height: 12px;
+}
+
+/* Label */
+
+.merix-progress-label {
+    display: block;
+    margin-top: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}

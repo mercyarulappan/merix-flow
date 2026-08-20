@@ -1,0 +1,95 @@
+.merix-snow {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 90px;
+    height: 60px;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    box-shadow:
+        inset 0 0 12px rgba(59, 130, 246, 0.12),
+        0 0 12px rgba(59, 130, 246, 0.12);
+}
+
+.merix-snow span {
+    position: absolute;
+
+    top: -20px;
+    left: var(--left);
+
+    color: #60a5fa;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    animation:
+        merix-snow-fall var(--duration) linear infinite;
+
+    animation-delay: var(--delay);
+}
+
+@keyframes merix-snow-fall {
+    0% {
+        top: -15px;
+
+        transform: translateX(0) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(8px) rotate(120deg);
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        top: 70px;
+
+        transform: translateX(-8px) rotate(240deg);
+
+        opacity: 0;
+    }
+}
+
+/* Small */
+
+.merix-snow-small {
+    width: 60px;
+    height: 40px;
+}
+
+.merix-snow-small span {
+    font-size: 7px;
+}
+
+/* Medium */
+
+.merix-snow-medium {
+    width: 90px;
+    height: 60px;
+}
+
+/* Large */
+
+.merix-snow-large {
+    width: 130px;
+    height: 80px;
+}
+
+.merix-snow-large span {
+    font-size: 14px;
+}

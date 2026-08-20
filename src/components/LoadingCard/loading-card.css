@@ -1,0 +1,52 @@
+.merix-loading-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e5e7eb;
+}
+
+.merix-loading-card-image {
+    width: 100%;
+    background: #e5e7eb;
+    animation: merix-card-pulse 1.5s ease-in-out infinite;
+}
+
+.merix-loading-card-content {
+    padding: 16px;
+}
+
+.merix-loading-card-line {
+    width: 100%;
+    height: 14px;
+
+    margin-top: 10px;
+
+    border-radius: 6px;
+
+    background: #e5e7eb;
+
+    animation: merix-card-pulse 1.5s ease-in-out infinite;
+}
+
+.merix-loading-card-title {
+    width: 65%;
+    height: 18px;
+    margin-top: 0;
+}
+
+.merix-loading-card-short {
+    width: 45%;
+}
+
+@keyframes merix-card-pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

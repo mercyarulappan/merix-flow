@@ -1,0 +1,86 @@
+.merix-bubbles {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 7px;
+
+    height: 50px;
+}
+
+.merix-bubbles span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    animation: merix-bubble-float 1.4s ease-in-out infinite;
+}
+
+.merix-bubbles span:nth-child(1) {
+    background: #ff4d6d;
+    animation-delay: 0s;
+}
+
+.merix-bubbles span:nth-child(2) {
+    background: #ff9f1c;
+    animation-delay: 0.15s;
+}
+
+.merix-bubbles span:nth-child(3) {
+    background: #2ec4b6;
+    animation-delay: 0.3s;
+}
+
+.merix-bubbles span:nth-child(4) {
+    background: #3a86ff;
+    animation-delay: 0.45s;
+}
+
+.merix-bubbles span:nth-child(5) {
+    background: #8338ec;
+    animation-delay: 0.6s;
+}
+
+@keyframes merix-bubble-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-22px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Small */
+
+.merix-bubbles-small {
+    height: 35px;
+    gap: 5px;
+}
+
+.merix-bubbles-small span {
+    width: 7px;
+    height: 7px;
+}
+
+/* Medium */
+
+.merix-bubbles-medium {
+    height: 50px;
+}
+
+/* Large */
+
+.merix-bubbles-large {
+    height: 70px;
+    gap: 10px;
+}
+
+.merix-bubbles-large span {
+    width: 14px;
+    height: 14px;
+}

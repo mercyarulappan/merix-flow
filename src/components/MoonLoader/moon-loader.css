@@ -1,0 +1,151 @@
+.merix-moon {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 70px;
+}
+
+.merix-moon-shape {
+    position: relative;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,
+            #fef9c3,
+            #facc15);
+
+    box-shadow:
+        0 0 10px rgba(250, 204, 21, 0.7),
+        0 0 25px rgba(250, 204, 21, 0.35);
+
+    animation: merix-moon-float 2s ease-in-out infinite;
+}
+
+/* Cutout to create crescent */
+
+.merix-moon-shape::after {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    right: -7px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #0f172a;
+}
+
+/* Stars */
+
+.merix-moon-stars span {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #fef9c3;
+
+    box-shadow:
+        0 0 6px #fef08a;
+
+    animation: merix-star-twinkle 1.4s ease-in-out infinite;
+}
+
+.merix-moon-stars span:nth-child(1) {
+    top: 8px;
+    left: 12px;
+
+    animation-delay: 0s;
+}
+
+.merix-moon-stars span:nth-child(2) {
+    top: 22px;
+    right: 8px;
+
+    animation-delay: 0.25s;
+}
+
+.merix-moon-stars span:nth-child(3) {
+    bottom: 9px;
+    left: 17px;
+
+    animation-delay: 0.5s;
+}
+
+.merix-moon-stars span:nth-child(4) {
+    top: 4px;
+    right: 24px;
+
+    width: 3px;
+    height: 3px;
+
+    animation-delay: 0.75s;
+}
+
+.merix-moon-stars span:nth-child(5) {
+    bottom: 16px;
+    right: 18px;
+
+    width: 3px;
+    height: 3px;
+
+    animation-delay: 1s;
+}
+
+@keyframes merix-moon-float {
+
+    0%,
+    100% {
+        transform: translateY(2px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+@keyframes merix-star-twinkle {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* Small */
+
+.merix-moon-small {
+    transform: scale(0.7);
+}
+
+/* Medium */
+
+.merix-moon-medium {
+    transform: scale(1);
+}
+
+/* Large */
+
+.merix-moon-large {
+    transform: scale(1.35);
+}

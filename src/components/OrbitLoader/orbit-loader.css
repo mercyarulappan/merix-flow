@@ -1,0 +1,149 @@
+.merix-orbit {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.merix-orbit-ring {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    animation: merix-orbit-rotate 1.8s linear infinite;
+}
+
+.merix-orbit-ring span {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    animation: merix-orbit-pulse 1s ease-in-out infinite;
+}
+
+/* Particle positions */
+
+.merix-orbit-ring span:nth-child(1) {
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #ff3366;
+}
+
+.merix-orbit-ring span:nth-child(2) {
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+
+    background: #00c6ff;
+
+    animation-delay: 0.2s;
+}
+
+.merix-orbit-ring span:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #7c3aed;
+
+    animation-delay: 0.4s;
+}
+
+.merix-orbit-ring span:nth-child(4) {
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    background: #22c55e;
+
+    animation-delay: 0.6s;
+}
+
+/* Center */
+
+.merix-orbit-center {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #6366f1;
+
+    box-shadow:
+        0 0 8px #6366f1,
+        0 0 18px #6366f1;
+
+    animation: merix-orbit-center-pulse 1s ease-in-out infinite;
+}
+
+/* Sizes */
+
+.merix-orbit-small {
+    width: 30px;
+    height: 30px;
+}
+
+.merix-orbit-medium {
+    width: 50px;
+    height: 50px;
+}
+
+.merix-orbit-large {
+    width: 75px;
+    height: 75px;
+}
+
+.merix-orbit-small .merix-orbit-ring span {
+    width: 5px;
+    height: 5px;
+}
+
+.merix-orbit-large .merix-orbit-ring span {
+    width: 11px;
+    height: 11px;
+}
+
+/* Animations */
+
+@keyframes merix-orbit-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes merix-orbit-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes merix-orbit-center-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}

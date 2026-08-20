@@ -1,0 +1,64 @@
+.merix-heart {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.merix-heart-shape {
+    display: block;
+
+    color: #f43f5e;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 6px rgba(244, 63, 94, 0.6),
+        0 0 18px rgba(244, 63, 94, 0.35);
+
+    animation: merix-heartbeat 1s ease-in-out infinite;
+}
+
+@keyframes merix-heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.15);
+    }
+
+    20% {
+        transform: scale(0.95);
+    }
+
+    30% {
+        transform: scale(1.25);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Small */
+
+.merix-heart-small .merix-heart-shape {
+    font-size: 24px;
+}
+
+/* Medium */
+
+.merix-heart-medium .merix-heart-shape {
+    font-size: 42px;
+}
+
+/* Large */
+
+.merix-heart-large .merix-heart-shape {
+    font-size: 64px;
+}

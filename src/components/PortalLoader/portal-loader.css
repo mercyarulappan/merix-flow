@@ -1,0 +1,232 @@
+.merix-portal {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+}
+
+/* Portal rings */
+
+.merix-portal-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border-style: solid;
+
+    border-width: 2px;
+
+    animation: merix-portal-spin 3s linear infinite;
+}
+
+.ring-one {
+    width: 58px;
+    height: 58px;
+
+    border-color: #8b5cf6 transparent #ec4899 transparent;
+
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.6),
+        inset 0 0 10px rgba(236, 72, 153, 0.3);
+}
+
+.ring-two {
+    width: 43px;
+    height: 43px;
+
+    border-color: transparent #22d3ee transparent #6366f1;
+
+    animation-duration: 2s;
+    animation-direction: reverse;
+
+    box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.5);
+}
+
+.ring-three {
+    width: 70px;
+    height: 70px;
+
+    border-color: #ec4899 transparent #8b5cf6 transparent;
+
+    animation-duration: 4s;
+
+    opacity: 0.55;
+}
+
+/* Center */
+
+.merix-portal-core {
+    position: absolute;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            #ffffff,
+            #c4b5fd 25%,
+            #7c3aed 60%,
+            transparent 100%);
+
+    box-shadow:
+        0 0 12px #a78bfa,
+        0 0 28px #8b5cf6,
+        0 0 45px rgba(236, 72, 153, 0.5);
+
+    animation: merix-portal-pulse 1s ease-in-out infinite;
+}
+
+/* Particles */
+
+.merix-portal-particles {
+    position: absolute;
+
+    inset: 0;
+
+    animation: merix-portal-particle-rotate 4s linear infinite;
+}
+
+.merix-portal-particles span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    margin: -2px;
+
+    border-radius: 50%;
+
+    background: #67e8f9;
+
+    box-shadow:
+        0 0 7px #22d3ee;
+
+    animation: merix-portal-particle 1.5s ease-in infinite;
+}
+
+.merix-portal-particles span:nth-child(1) {
+    --x: 0px;
+    --y: -38px;
+    animation-delay: 0s;
+}
+
+.merix-portal-particles span:nth-child(2) {
+    --x: 27px;
+    --y: -27px;
+    animation-delay: 0.18s;
+}
+
+.merix-portal-particles span:nth-child(3) {
+    --x: 38px;
+    --y: 0px;
+    animation-delay: 0.36s;
+}
+
+.merix-portal-particles span:nth-child(4) {
+    --x: 27px;
+    --y: 27px;
+    animation-delay: 0.54s;
+}
+
+.merix-portal-particles span:nth-child(5) {
+    --x: 0px;
+    --y: 38px;
+    animation-delay: 0.72s;
+}
+
+.merix-portal-particles span:nth-child(6) {
+    --x: -27px;
+    --y: 27px;
+    animation-delay: 0.9s;
+}
+
+.merix-portal-particles span:nth-child(7) {
+    --x: -38px;
+    --y: 0px;
+    animation-delay: 1.08s;
+}
+
+.merix-portal-particles span:nth-child(8) {
+    --x: -27px;
+    --y: -27px;
+    animation-delay: 1.26s;
+}
+
+@keyframes merix-portal-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes merix-portal-particle-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes merix-portal-particle {
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(var(--x), var(--y)) scale(0.2);
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(0, 0) scale(1.2);
+    }
+}
+
+@keyframes merix-portal-pulse {
+
+    0%,
+    100% {
+        transform: scale(0.7);
+
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.3);
+
+        opacity: 1;
+    }
+}
+
+/* Sizes */
+
+.merix-portal-small {
+    transform: scale(0.7);
+}
+
+.merix-portal-medium {
+    transform: scale(1);
+}
+
+.merix-portal-large {
+    transform: scale(1.4);
+}

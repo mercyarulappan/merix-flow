@@ -1,0 +1,222 @@
+.merix-radar {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.merix-radar-grid {
+    position: relative;
+
+    width: 64px;
+    height: 64px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(34, 197, 94, 0.12),
+            rgba(2, 6, 23, 0.95));
+
+    border: 2px solid rgba(34, 197, 94, 0.5);
+
+    box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.25),
+        inset 0 0 15px rgba(34, 197, 94, 0.12);
+}
+
+/* Radar rings */
+
+.merix-radar-ring {
+    position: absolute;
+
+    border: 1px solid rgba(34, 197, 94, 0.25);
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.ring-one {
+    width: 18px;
+    height: 18px;
+}
+
+.ring-two {
+    width: 36px;
+    height: 36px;
+}
+
+.ring-three {
+    width: 54px;
+    height: 54px;
+}
+
+/* Cross lines */
+
+.merix-radar-grid::before,
+.merix-radar-grid::after {
+    content: "";
+
+    position: absolute;
+
+    background: rgba(34, 197, 94, 0.2);
+}
+
+.merix-radar-grid::before {
+    top: 0;
+    left: 50%;
+
+    width: 1px;
+    height: 100%;
+
+    transform: translateX(-50%);
+}
+
+.merix-radar-grid::after {
+    left: 0;
+    top: 50%;
+
+    width: 100%;
+    height: 1px;
+
+    transform: translateY(-50%);
+}
+
+/* Scanner */
+
+.merix-radar-line {
+    position: absolute;
+
+    width: 50%;
+    height: 2px;
+
+    top: 50%;
+    left: 50%;
+
+    transform-origin: left center;
+
+    background: linear-gradient(90deg,
+            #22c55e,
+            rgba(34, 197, 94, 0));
+
+    box-shadow:
+        0 0 8px #22c55e,
+        0 0 16px rgba(34, 197, 94, 0.5);
+
+    animation: merix-radar-scan 1.8s linear infinite;
+}
+
+@keyframes merix-radar-scan {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Center */
+
+.merix-radar-center {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #86efac;
+
+    box-shadow:
+        0 0 6px #22c55e,
+        0 0 12px #22c55e;
+}
+
+/* Detection points */
+
+.merix-radar-dot {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #bbf7d0;
+
+    box-shadow:
+        0 0 6px #22c55e,
+        0 0 12px #22c55e;
+
+    animation: merix-radar-blink 1.8s ease-in-out infinite;
+}
+
+.dot-one {
+    top: 19px;
+    left: 43px;
+
+    animation-delay: 0.3s;
+}
+
+.dot-two {
+    top: 42px;
+    left: 18px;
+
+    animation-delay: 0.9s;
+}
+
+.dot-three {
+    top: 12px;
+    left: 20px;
+
+    animation-delay: 1.3s;
+}
+
+@keyframes merix-radar-blink {
+
+    0%,
+    40%,
+    100% {
+        opacity: 0.2;
+        transform: scale(0.6);
+    }
+
+    50%,
+    70% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* Small */
+
+.merix-radar-small .merix-radar-grid {
+    width: 42px;
+    height: 42px;
+}
+
+/* Medium */
+
+.merix-radar-medium .merix-radar-grid {
+    width: 64px;
+    height: 64px;
+}
+
+/* Large */
+
+.merix-radar-large .merix-radar-grid {
+    width: 90px;
+    height: 90px;
+}

@@ -1,0 +1,158 @@
+.merix-cloud {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 75px;
+}
+
+.merix-cloud-shape {
+    position: absolute;
+
+    top: 10px;
+    left: 50%;
+
+    width: 58px;
+    height: 25px;
+
+    transform: translateX(-50%);
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg,
+            #f8fafc,
+            #cbd5e1);
+
+    box-shadow:
+        0 5px 12px rgba(100, 116, 139, 0.2);
+
+    animation: merix-cloud-float 1.8s ease-in-out infinite;
+}
+
+.cloud-part {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: inherit;
+}
+
+.cloud-part.one {
+    width: 25px;
+    height: 25px;
+
+    left: 7px;
+    top: -12px;
+}
+
+.cloud-part.two {
+    width: 32px;
+    height: 32px;
+
+    left: 21px;
+    top: -18px;
+}
+
+.cloud-part.three {
+    width: 22px;
+    height: 22px;
+
+    right: 4px;
+    top: -9px;
+}
+
+.merix-cloud-rain {
+    position: absolute;
+
+    top: 43px;
+    left: 50%;
+
+    display: flex;
+
+    gap: 11px;
+
+    transform: translateX(-50%);
+}
+
+.merix-cloud-rain span {
+    width: 3px;
+    height: 11px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom,
+            #38bdf8,
+            #2563eb);
+
+    box-shadow:
+        0 0 5px rgba(37, 99, 235, 0.3);
+
+    animation: merix-rain-fall 0.9s linear infinite;
+}
+
+.merix-cloud-rain span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.merix-cloud-rain span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.merix-cloud-rain span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.merix-cloud-rain span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes merix-cloud-float {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes merix-rain-fall {
+    0% {
+        transform: translateY(-4px);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+
+        opacity: 0;
+    }
+}
+
+/* Small */
+
+.merix-cloud-small {
+    transform: scale(0.7);
+}
+
+/* Medium */
+
+.merix-cloud-medium {
+    transform: scale(1);
+}
+
+/* Large */
+
+.merix-cloud-large {
+    transform: scale(1.35);
+}

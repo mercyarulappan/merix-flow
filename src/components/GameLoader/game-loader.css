@@ -1,0 +1,190 @@
+.merix-game {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 55px;
+}
+
+.merix-game-controller {
+    position: relative;
+
+    width: 90px;
+    height: 42px;
+
+    border-radius: 16px 16px 20px 20px;
+
+    background: linear-gradient(135deg,
+            #6366f1,
+            #8b5cf6);
+
+    box-shadow:
+        0 6px 15px rgba(99, 102, 241, 0.35),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2);
+
+    animation: merix-game-float 1.5s ease-in-out infinite;
+}
+
+/* D-pad */
+
+.merix-game-dpad {
+    position: absolute;
+
+    left: 14px;
+    top: 12px;
+
+    width: 20px;
+    height: 20px;
+}
+
+.merix-game-dpad span {
+    position: absolute;
+
+    display: block;
+
+    background: #1e1b4b;
+
+    border-radius: 3px;
+}
+
+.dpad-horizontal {
+    width: 20px;
+    height: 7px;
+
+    top: 7px;
+    left: 0;
+}
+
+.dpad-vertical {
+    width: 7px;
+    height: 20px;
+
+    top: 0;
+    left: 7px;
+}
+
+/* Action buttons */
+
+.merix-game-buttons {
+    position: absolute;
+
+    right: 12px;
+    top: 8px;
+
+    width: 28px;
+    height: 25px;
+}
+
+.merix-game-buttons span {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 6px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.25);
+
+    animation: merix-game-button 1s ease-in-out infinite;
+}
+
+.button-a {
+    right: 0;
+    top: 2px;
+
+    background: #f43f5e;
+
+    animation-delay: 0s;
+}
+
+.button-b {
+    left: 0;
+    bottom: 0;
+
+    background: #22c55e;
+
+    animation-delay: 0.5s;
+}
+
+/* Center buttons */
+
+.merix-game-center {
+    position: absolute;
+
+    left: 50%;
+    bottom: 7px;
+
+    display: flex;
+
+    gap: 5px;
+
+    transform: translateX(-50%);
+}
+
+.merix-game-center span {
+    width: 10px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: rgba(30, 27, 75, 0.8);
+}
+
+/* Animations */
+
+@keyframes merix-game-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+}
+
+@keyframes merix-game-button {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Small */
+
+.merix-game-small .merix-game-controller {
+    transform: scale(0.7);
+}
+
+/* Medium */
+
+.merix-game-medium .merix-game-controller {
+    transform: scale(1);
+}
+
+/* Large */
+
+.merix-game-large .merix-game-controller {
+    transform: scale(1.3);
+}

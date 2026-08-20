@@ -1,0 +1,199 @@
+.merix-rocket {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 90px;
+
+    overflow: hidden;
+}
+
+.merix-rocket-body {
+    position: relative;
+
+    width: 25px;
+    height: 48px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: linear-gradient(135deg,
+            #f8fafc,
+            #cbd5e1);
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(99, 102, 241, 0.25);
+
+    animation: merix-rocket-fly 1.5s ease-in-out infinite;
+}
+
+/* Rocket nose */
+
+.merix-rocket-body::before {
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+    left: 50%;
+
+    width: 17px;
+    height: 17px;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    border-radius: 4px;
+
+    background: #f8fafc;
+}
+
+/* Window */
+
+.merix-rocket-window {
+    position: absolute;
+
+    top: 11px;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    transform: translateX(-50%);
+
+    border: 2px solid #6366f1;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    box-shadow:
+        0 0 6px rgba(56, 189, 248, 0.7);
+
+    z-index: 2;
+}
+
+/* Fins */
+
+.merix-rocket-fin {
+    position: absolute;
+
+    bottom: 3px;
+
+    width: 10px;
+    height: 18px;
+
+    background: #f43f5e;
+
+    z-index: -1;
+}
+
+.merix-rocket-fin.left {
+    left: -7px;
+
+    border-radius: 8px 0 3px 8px;
+
+    transform: rotate(15deg);
+}
+
+.merix-rocket-fin.right {
+    right: -7px;
+
+    border-radius: 0 8px 8px 3px;
+
+    transform: rotate(-15deg);
+}
+
+/* Flame */
+
+.merix-rocket-flame {
+    position: absolute;
+
+    left: 50%;
+    bottom: -21px;
+
+    width: 12px;
+    height: 24px;
+
+    transform: translateX(-50%);
+
+    z-index: -2;
+}
+
+.merix-rocket-flame span {
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50% 50% 60% 60%;
+}
+
+.merix-rocket-flame span:first-child {
+    width: 12px;
+    height: 23px;
+
+    background: linear-gradient(to bottom,
+            #facc15,
+            #f97316,
+            transparent);
+
+    animation: merix-flame 0.35s ease-in-out infinite alternate;
+}
+
+.merix-rocket-flame span:last-child {
+    width: 6px;
+    height: 15px;
+
+    background: linear-gradient(to bottom,
+            white,
+            #facc15,
+            transparent);
+
+    animation: merix-flame 0.25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes merix-rocket-fly {
+
+    0%,
+    100% {
+        transform: translateY(8px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes merix-flame {
+    from {
+        transform: translateX(-50%) scaleY(0.7);
+    }
+
+    to {
+        transform: translateX(-50%) scaleY(1.25);
+    }
+}
+
+/* Small */
+
+.merix-rocket-small {
+    transform: scale(0.7);
+}
+
+/* Medium */
+
+.merix-rocket-medium {
+    transform: scale(1);
+}
+
+/* Large */
+
+.merix-rocket-large {
+    transform: scale(1.35);
+}
