@@ -1,49 +1,56 @@
 # MerixFlow ✨
 
-A colorful collection of creative, modern, and lightweight React loading animations.
+A colorful collection of **creative, modern, and lightweight React loading animations**.
 
 Built for developers who want beautiful loaders without writing animation CSS from scratch.
+
+[![npm version](https://img.shields.io/npm/v/merix-flow.svg)](https://www.npmjs.com/package/merix-flow)
+[![npm downloads](https://img.shields.io/npm/dm/merix-flow.svg)](https://www.npmjs.com/package/merix-flow)
+[![GitHub stars](https://img.shields.io/github/stars/mercyarulappan/merix-flow.svg)](https://github.com/mercyarulappan/merix-flow)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
 
 ## ✨ Features
 
-- 🎨 35 unique loaders
-- 🌈 Colorful animations
-- ⚡ Lightweight
-- ⚛️ Built for React
-- 📦 Easy npm installation
-- 🔧 Simple component API
-- 📱 Responsive
-- ♿ Accessible loading state
-- 🚫 No separate CSS import required
+- **35 unique loaders**
+- Colorful and creative animations
+- Lightweight and fast
+- Built specifically for React
+- Simple npm installation
+- Easy-to-use component API
+- Responsive design
+- Accessible loading states
+- No separate CSS import required
 
 ---
 
-## 📦 Installation
+##  Installation
+
+Install MerixFlow using npm:
 
 ```bash
 npm install merix-flow
 
+```
+## Usage
 
+Import any loader directly from `merix-flow`:
 
-🚀 Usage
-
-Import any loader directly from merix-flow:
-
+```jsx
 import { MagicLoader } from "merix-flow";
-
 
 function App() {
   return <MagicLoader />;
 }
 
-
 export default App;
 
 No additional CSS import is required.
+```
 
-📏 Sizes
+### Sizes
+```
 
 Most loaders support three sizes:
 
@@ -52,8 +59,10 @@ Most loaders support three sizes:
 <MagicLoader size="large" />
 
 The default size is medium.
+```
 
-🎨 Available Loaders
+### Available Loaders
+```
 Basic
 Spinner
 DotsLoader
@@ -94,14 +103,14 @@ Games & Space
 PacmanLoader
 GameLoader
 RocketLoader
-✨ Pro
 ParticleLoader
 PortalLoader
 MorphLoader
 MagicLoader
+```
 
-
-💡 Example
+### Example
+```
 import {
   Spinner,
   RainbowLoader,
@@ -125,14 +134,26 @@ function LoadingExample() {
 
 
 export default LoadingExample;
-🛠️ Built With
+```
+### Built With
+```
 React
 JavaScript
 CSS
 Vite
+```
 
-📄 License
+### License
 MIT
 
+### Links
+
+- 📦 **npm Package:** [MerixFlow](https://www.npmjs.com/package/merix-flow)
+- 💻 **GitHub Repository:** [MerixFlow](https://github.com/mercyarulappan/merix-flow)
+- 🚀 **Live Showcase:** [MerixFlow Showcase](https://merix-flow-showcase.vercel.app/)
+
 ### Author
-Created with ❤️ as part of the MerixFlow open-source project.
+Created with ❤️ by Mercy
+
+If you find MerixFlow useful, consider giving the repository a ⭐ on GitHub!
+
