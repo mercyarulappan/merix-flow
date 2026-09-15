@@ -1,7 +1,15 @@
 .merix-aurora {
-    position: relative;
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display: inline-flex;
+    z-index: 9999;
 
     align-items: center;
     justify-content: center;
@@ -16,6 +24,10 @@
         0 0 15px rgba(34, 211, 238, 0.25),
         0 0 35px rgba(139, 92, 246, 0.2);
 }
+
+
+
+
 
 .merix-aurora-glow {
     position: absolute;

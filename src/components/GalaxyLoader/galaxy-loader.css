@@ -1,11 +1,16 @@
 .merix-galaxy {
-    position: relative;
+position: fixed;
 
-    display: inline-flex;
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%);
+
+    display: flex;
     align-items: center;
     justify-content: center;
 
+    z-index: 9999;
     width: 70px;
     height: 70px;
 

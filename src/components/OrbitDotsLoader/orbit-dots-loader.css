@@ -1,18 +1,19 @@
 .merix-orbit-dots {
-    position: relative;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 60px;
-    height: 60px;
+    position: fixed;
+    
+        top: 50%;
+        left: 50%;
+    
+        transform: translate(-50%, -50%);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
 }
 
 .merix-orbit-dots span {
     position: absolute;
-
     width: 8px;
     height: 8px;
 
@@ -77,24 +78,7 @@
     }
 }
 
-/* Center */
 
-.merix-orbit-dots::after {
-    content: "";
-
-    position: absolute;
-
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: white;
-
-    box-shadow:
-        0 0 6px white,
-        0 0 12px #8b5cf6;
-}
 
 /* Small */
 
