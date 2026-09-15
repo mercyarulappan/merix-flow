@@ -1,15 +1,16 @@
 .merix-rocket {
-    position: relative;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 70px;
-    height: 90px;
-
-    overflow: hidden;
+    position: fixed;
+    
+        top: 50%;
+        left: 50%;
+    
+        transform: translate(-50%, -50%);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        z-index: 9999;
 }
 
 .merix-rocket-body {

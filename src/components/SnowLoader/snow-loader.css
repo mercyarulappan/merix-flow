@@ -1,11 +1,16 @@
 .merix-snow {
-    position: relative;
-
-    overflow: hidden;
-
-    width: 90px;
-    height: 60px;
-
+    position: fixed;
+    
+        top: 50%;
+        left: 50%;
+    
+        transform: translate(-50%, -50%);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        z-index: 9999;
     border-radius: 10px;
 
     background: #eff6ff;

@@ -1,10 +1,16 @@
 .merix-bubbles {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 7px;
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
 
-    height: 50px;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
 }
 
 .merix-bubbles span {

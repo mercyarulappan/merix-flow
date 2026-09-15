@@ -1,13 +1,16 @@
 .merix-magic {
-    position: relative;
+    position: fixed;
 
-    display: inline-flex;
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%);
+
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 90px;
-    height: 90px;
+    z-index: 9999;
 }
 
 /* Main energy ring */
@@ -17,7 +20,7 @@
 
     width: 62px;
     height: 62px;
-
+    
     border: 2px solid transparent;
 
     border-top-color: #f0abfc;

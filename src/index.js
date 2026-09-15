@@ -1,7 +1,6 @@
 export { default as Spinner } from "./components/Spinner/Spinner";
 export { default as DotsLoader } from "./components/Dots/DotsLoader";
 export { default as PulseLoader } from "./components/Pulse/PulseLoader";
-export { default as Skeleton } from "./components/Skeleton/Skeleton";
 export { default as LoadingOverlay } from "./components/LoadingOverlay/LoadingOverlay";
 export { default as ProgressLoader } from "./components/ProgressLoader/ProgressLoader";
 export { default as LoadingButton } from "./components/LoadingButton/LoadingButton";

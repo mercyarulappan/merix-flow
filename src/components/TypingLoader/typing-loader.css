@@ -1,7 +1,17 @@
 .merix-typing {
-    display: inline-flex;
-
-    align-items: center;
+    position: fixed;
+    
+        top: 50%;
+        left: 50%;
+    
+        transform: translate(-50%, -50%);
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        z-index: 9999;
+            align-items: center;
 
     font-family: monospace;
 
