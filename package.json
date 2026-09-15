@@ -1,6 +1,6 @@
 {
   "name": "merix-flow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A colorful collection of creative React loaders and loading animations.",
   "type": "module",
   "license": "MIT",
@@ -10,18 +10,16 @@
     ".": {
       "import": "./dist/merix-flow.js",
       "require": "./dist/merix-flow.cjs"
-  }
-},
-"repository": {
-  "type": "git",
-  "url": "https://github.com/mercyarulappan/merix-flow.git"
-},
-"bugs": {
-  "url": "https://github.com/mercyarulappan/merix-flow/issues"
-},
-"homepage": "https://github.com/mercyarulappan/merix-flow#readme",
-
-
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mercyarulappan/merix-flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mercyarulappan/merix-flow/issues"
+  },
+  "homepage": "https://github.com/mercyarulappan/merix-flow#readme",
   "files": [
     "dist",
     "README.md"
